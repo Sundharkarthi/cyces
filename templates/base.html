@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant App</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="7588829440-18h2gt9ku6nvudj6brf88294l81fctg1.apps.googleusercontent.com">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E90FF;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 100px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container, .register-container, .password-reset-container, .password-change-container ,.admin-login-container, .password-change-done-container{
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
