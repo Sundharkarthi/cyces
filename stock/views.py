@@ -1,34 +1,4 @@
-# from django.shortcuts import get_object_or_404
-# from django.http import JsonResponse
-# from rest_framework.response import Response
-# from first_app.models import Dish,OrderItem
-# from django.views.decorators.csrf import csrf_exempt
-# @csrf_exempt
-# def place_order(request):
-#     # Get the product based on the provided product_id
-#     import pdb
-#     pdb.set_trace()
-#     if request.method == 'POST':
-#         new=request.data.get('dish_id')
-#         new2=request.data.get('order_count')
-#         print(new)
-#         print(new2)
-#         product = get_object_or_404(Dish, id=new)
-#         order_count=get_object_or_404(OrderItem,id=new2)
-#         # Check if there is enough stock to fulfill the order
-#         if product.count >= order_count.order_count:
-#             # Subtract the order count from the stock
-#             product.count -= order_count
-#             product.save()
-#             response_data = {'message': f'Order placed for {order_count} units of {product.dishes}'}
-#             print(response_data)
-#             # return Response(response_data)
-#         else:
-#             response_data = {'message': 'Out of Stock'}
-#         return JsonResponse(response_data)
-#     else:
-#         pass
-#
+
 
 from rest_framework.views import APIView
 from rest_framework.response import Response

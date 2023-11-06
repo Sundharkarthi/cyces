@@ -40,7 +40,12 @@ urlpatterns = [
     path('orders/',Ordersview.as_view()),
     path('stock_count/',PlaceOrder.as_view()),
     path('create_order/',CreateOrder.as_view()),
-    path('ordersitem/',Ordersitemview.as_view())
-    # path('des/<int:pk>',SnippetDetail.as_view()),
-    # path('',include('snippets.urls')),
+    path('ordersitem/',Ordersitemview.as_view()),
+    path('forget', fpassword.as_view()),
+    path('verify', verify.as_view()),
+    path('reset', reset.as_view()),
+    path('login/',login_view.as_view(), name='login'),
+    path('dish_describe',DishDescriptionView.as_view()),
+    path('calory_count',Calorie_count.as_view()),
+
 ]
